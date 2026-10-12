@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@layer base {
+    h1 {
+        @apply text-3xl; 
+        @variant sm {
+            @apply text-4xl; 
+        }
+    }
+
+    h2 {
+        @apply text-2xl;
+        @variant sm {
+            @apply text-3xl;
+        }
+    }
+
+    h3 {
+        @apply text-lg;
+        @variant sm {
+            @apply text-xl;
+        }
+    }
+
+    li {
+        @apply text-base;
+        @variant sm {
+            @apply text-lg;
+        }
+    }
+
+    a {
+        @apply text-base;
+        @variant hover{
+            @apply underline
+        }
+        @variant sm {
+            @apply text-lg;
+        }
+    }
+
+    p {
+        @variant sm {
+            @apply text-lg;
+        }
+    }
+
+    label {
+        @apply text-base;
+        @apply mb-2;
+        @variant sm {
+            @apply text-lg;
+        }
+    }
+
+    button {
+        @apply bg-sky-600;
+        @apply text-white;
+        @apply rounded-md;
+        @apply py-2;
+        @apply px-4;
+        @variant hover {
+            @apply bg-sky-700;
+        }
+        @variant sm {
+            @apply text-lg;
+        }
+        @variant disabled { 
+            @apply bg-gray-400
+        }
+    }
+
+    input {
+        @apply border-2; 
+        @apply rounded-md;
+        @apply pl-1; 
+        @variant focus {
+            @apply outline-1;
+        }
+        @variant sm {
+            @apply text-lg;
+        }
+    }
+
+    input[aria-invalid="true"] {
+        @apply border-red-500;
+        @variant focus {
+            @apply outline-red-500;
+        }
+    }
+    
+    select {
+        @apply border-2; 
+        @apply rounded-md;
+        @variant focus {
+            @apply outline-1
+        }
+        @variant sm {
+            @apply text-lg;
+        }
+    }
+
+    form {
+        @apply py-8;
+        @apply px-14; 
+        @apply border-2;
+        @apply flex; 
+        @apply flex-col;
+        @variant sm {
+            @apply px-20; 
+        }
+        @variant md {
+            @apply px-10;
+        }
+        @variant lg {
+            @apply px-18;
+        }
+    }
+}
+
+@layer components {
+
+    .errors-container {
+        @apply list-disc; 
+        @apply mt-1;
+        @apply mb-6; 
+        @apply ml-5;
+        @variant empty {
+            @apply invisible;
+        }
+    }
+}
+
+
+
+
+
